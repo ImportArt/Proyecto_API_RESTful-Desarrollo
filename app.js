@@ -5,9 +5,12 @@ const express = require('express');
 const app = express();
 
 // Permite leer cuerpos de petición en formato JSON
+
 app.use(express.json());
 
 // Rutas de la API
+
+app.use('/api/auth', require('./routes/authRoutes'));
 
 // Ruta no encontrada (404)
 app.use((req, res) => {
