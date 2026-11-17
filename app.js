@@ -11,6 +11,7 @@ app.use(express.json());
 // Rutas de la API
 
 app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/orders', require('./routes/orderRoutes'));
 
 // Ruta no encontrada (404)
 app.use((req, res) => {
